@@ -1,0 +1,696 @@
+html,body {
+	padding:0;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--bgColor);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+:root {
+	--purpleColorLighter: #A42DE8;
+	--blueColorLighter: #318AFF;
+	--blueColorDarker: #2D3DE8;
+	--bgColor: #ffffff;
+	--fgColor: #800080;
+	--fgColorLighter: rgba(128,0,128,0.5);
+	--headerTextColor: #ffffff;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
+}
+
+h1,h2,h3 {
+	font-family: 'Dynapuff';
+	text-overflow: ellipsis;
+
+}
+
+a {
+	text-decoration: none;
+	color: var(--headerTextColor);
+}
+
+ul {
+	padding-left: 0;
+	margin: 0 0;
+  }
+
+
+/* Page Templates */
+.page {
+	height: 100%;
+	width: 100%;
+}
+
+.template-title {
+	padding-left: 1.5%;
+	font-size: 1.8em;
+	color: var(--fgColor);
+	word-spacing: 0.25em;
+	margin-top: 4em;
+}
+
+/* Page Header */
+
+.page-header {
+	background-image: linear-gradient(var(--purpleColorLighter),var(--blueColorDarker));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.headerDescText {
+	display: flex;
+	margin-right: 1.5em;
+	color: var(--fgColor);
+	font-size: 1.2em;
+	font-style: "Ubuntu";
+}
+
+.logoLink{
+	text-decoration: none;
+	padding-left: 1.5%;
+}
+
+.logo {
+	text-decoration: none;
+	color: var(--headerTextColor);
+}
+
+
+/* Page Footer */
+.page-footer {
+	background-color: var(--purpleColorLighter);
+	padding-top: 0.5em;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+/* Samples page */
+
+.samplesSection {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.samplesSection ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 97%;
+	height: 100%;
+}
+
+.sampleCard {
+	font-family: 'Ubuntu';
+	border: solid var(--headerTextColor) 2px;
+	color: var(--headerTextColor);
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	margin-bottom: 2.5em;
+	border-bottom: solid var(--fgColor) 5px;
+}
+
+.sampleCardLeftHalf {
+	width: 50%;
+	height: 100%;
+}
+
+.sampleCardLeftHalf h2 {
+	height: 50%;
+	font-size: 1.7em;
+	margin: 0.5em 0 0 1em;
+	font-weight: normal;
+}
+
+.sampleCardLeftHalf p {
+	height: 50%;
+	font-size: 1em;
+	margin: 0.9em 0 1.2em 1.8em ;
+	/* color: rgba(240,196,240,0.5); */
+	color: var(--fgColor);
+	opacity: 0.5;
+}
+
+.sampleCardRightHalf {
+	width: 50%;
+	height: 100%;
+	justify-content: right;
+	display: flex;
+	flex-direction: row;
+}
+
+.editButton{
+	background: var(--fgColor);
+	color: var(--bgColor);
+	border: solid var(--fgColor) 2px;
+	font-family: 'Ubuntu';
+	width: 4.5em;
+	height: 2.4em;
+	font-size: 1.1em;
+	margin-right: 2em;
+}
+
+.sampleCardRightHalf .previewButton,.shareButton {
+	margin-right: 1em;
+}
+
+.editButton:hover{
+	background-color: var(--fgColorLighter);
+}
+
+.previewButton, .shareButton {
+	background: var(--bgColor);
+	color: var(--fgColor);
+	border: solid var(--fgColor) 2px;
+	font-family: 'Ubuntu';
+	width: 4.5em;
+	height: 2.4em;
+	font-size: 1.1em;
+}
+.previewButton {
+	text-align: center;
+	width: 6em;
+}
+
+.previewButton:hover, .shareButton:hover {
+	background: var(--fgColor);
+	border: none;
+	color: var(--bgColor);
+}
+
+.shareButton.Shared {
+	background-color: var(--fgColorLighter);
+	color: var(--bgColor);
+}
+
+.shareButton.Shared:hover {
+	background-color: var(--fgColor);
+}
+
+.createSampleSection {
+	margin-top: 0.4em;
+	display: flex;
+	width: 100%;
+	height: 4.5em;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.createSampleSection div {
+	border: solid var(--headerTextColor) 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 97%;
+	height: 100%;
+	border-bottom: solid var(--fgColor) 5px;
+}
+
+.createSampleSection a {
+	width: 14em;
+	color: var(--bgColor);
+	height: 50%;
+	background: none;
+	border: none;
+	font-size: 1em;
+}
+
+.createSampleSection a button {
+	font-family: 'Ubuntu';
+	width: 100%;
+	color: var(--bgColor);
+	height: 100%;
+	background-color: var(--fgColor);
+	border: solid var(--fgColor) 2px;
+	font-size: 1em;
+}
+
+.createSampleSection a button:hover {
+	background-color: var(--fgColorLighter);
+	
+}
+
+
+/*Sample Edit page*/
+
+.formSection {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.formSection form {
+	width: 97%;
+	height: 5.5em;
+	border: solid var(--fgColor) 2px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2.3em;
+	border-bottom: solid var(--fgColor) 5px;
+
+}
+
+.leftColumn {
+	height: 100%;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.rightColumn {
+	height: 100%;
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	/* background-color: red; */
+}
+
+.saveButton {
+	font-family: 'Ubuntu';
+	width: 4.5em;
+	background: var(--fgColor);
+	color: var(--bgColor);
+	border: none;
+	height: 2.4em;
+	font-size: 1.1em;
+}
+
+.saveButton:hover {
+	background: var(--fgColorLighter);
+	border: solid var(--fgColor) 2px;
+}
+
+
+
+
+.leftColumn input {
+	font-family: 'Dynapuff';
+	padding-left: 0.5em;
+	font-size: 2em;
+	outline: none;
+	height: 60%;
+	width: 95%;
+	text-decoration: none;
+	background: var(--fgColorLighter);
+	color: var(--fgColor);
+	border-radius: 0.5em;
+	border: none;
+}
+
+.sequencersSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+	width: 100%;
+	margin-top: 1em;
+}
+
+
+.sequencer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: auto;
+}
+
+.sequencer li {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1em;
+	overflow-x: hidden;
+}
+
+/* Takes inspiration for the week 8 contact. */
+.sequencer li .bar {
+	width: 6.25%;
+	height: 2.5em;
+	cursor: pointer;
+	color: var(--fgColor);
+	border: solid var(--fgColor) 1px;
+	border-bottom: solid var(--fgColor) 5px;
+
+}
+
+.sequencer li .bar:hover {
+	background: var(--fgColor);
+}
+
+.sequencer li .bar.selected {
+	background: var(--fgColor);
+	color: black;
+	font-weight: bold;
+}
+
+.sequencer li .bar.selected:hover {
+	background: var(--fgColorLighter);
+}
+/*  */
+
+.instrumentSelectSection {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1em;
+	height:2.5em;
+}
+
+.instrumentSelectSection ul {
+	margin: none;
+	width: 100%;
+	height: 100%;
+
+}
+
+.instrumentSelectSection ul button {
+	font-family: 'Ubuntu';
+	width: 25%;
+	background: none;
+	color: var(--fgColor);
+	border: none;
+	border: solid var(--fgColor) 2px;
+	height: 100%;
+	font-size: 1.1em;
+	border-bottom: solid var(--fgColor) 5px;
+
+}
+
+.instrumentSelectSection button:hover {
+	background: var(--fgColor);
+	color: var(--bgColor);
+}
+
+.instrumentSelectSection button.selected {
+	background: var(--fgColor);
+	color: var(--bgColor);
+}
+
+.instrumentSelectSection button.selected:hover {
+	background-color: var(--fgColorLighter);
+	color: var(--fgColor);
+}
+
+.innerSequencerSection {
+	width: 92%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.sequencerTitles {
+	width: 2%;
+	display: flex;
+	flex-direction: column;
+	margin-right: 2%;
+}
+
+
+.sequencerTitles p{
+	font-weight: bold;
+	color: var(--fgColor);
+	font-size: 1.1em;
+	height: 2.7em;
+	margin: 0 0 0 0;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin-bottom: 0.8em;
+}
+
+.sequencerTitles p:first-child {
+	font-weight: bold;
+	color: var(--fgColor);
+	font-size: 1.1em;
+	height: 2.25em;
+	margin: 0 0 0 0;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin-bottom: 0.9em;
+}
+
+.sequencerContent {
+	width: 94%;
+}
+
+
+/* ShareSample Page */
+
+.shareCardSection {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.customSampleCard {
+	font-family: 'Ubuntu';
+	border: solid var(--headerTextColor) 2px;
+	color: var(--headerTextColor);
+	width: 97%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	margin-bottom: 2.5em;
+	border-bottom: solid var(--fgColor) 5px;
+}
+
+.customSampleCard .previewButton {
+	margin-right: 2em;
+}
+
+.locationCard {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2em;
+}
+
+.locationList {
+	width: 94%;
+}
+
+.locationList p {
+	font-size: 1.1em;
+	font-family: 'Ubuntu';
+	color: var(--headerTextColor);
+	font-weight: bold;
+	margin: 0 0 0 0;
+	width: 50%;
+}
+
+.locationList div div {
+	width: 50%;
+	display: flex;
+	justify-content: right;
+}
+
+.locationList div div button {
+	background: var(--bgColor);
+	color: var(--fgColor);
+	border: solid var(--fgColor) 2px;
+	font-family: 'Ubuntu';
+	width: 50%;
+	height: 2.4em;
+	font-size: 1.1em;
+	border-bottom: solid var(--fgColor) 5px;
+}
+
+.locationList div div button:hover {
+	background: var(--fgColorLighter);
+	color: var(--bgColor);
+}
+
+.Shared.selected {
+	background: var(--fgColor);
+	color: var(--bgColor);
+	/* color: var(--bgColor); */
+}
+
+.NotShared.selected {
+	background: var(--fgColor);
+	color: var(--bgColor);
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bgColor: #422142;
+		--fgColor: #f0c4f0;
+		--fgColorLighter: rgba(210,169,210,0.5);
+		--headerTextColor: var(--fgColor);
+	}
+
+}
+
+@media only screen and (max-width: 500pt) {
+	.sampleCard {
+		flex-direction: column;
+		padding-bottom: 1.1em;
+	}
+	
+	.sampleCardLeftHalf {
+		width: 100%
+	}
+	
+	.sampleCardLeftHalf h2 {
+		height: 50%;
+		font-size: 1.5em;
+		margin: 0.5em 0 0 0.5em;
+		font-weight: normal;
+	}
+	
+	.sampleCardLeftHalf p {
+		font-size: 0.8em;
+		margin: 0.9em 0 1.2em 0.9em;
+	}
+	
+	.sampleCardRightHalf {
+		width: 100%;
+		justify-content: right;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.editButton{
+		margin-right: 0.9em;
+		font-size: 1em;
+	}
+
+	.sampleCardRightHalf .previewButton,.shareButton {
+		font-size: 0.9em;
+		margin-right: 0.5em;
+	}
+
+	.instrumentSelectSection ul button {
+		font-family: 'Ubuntu';
+		width: 25%;
+		background: none;
+		color: var(--fgColor);
+		border: none;
+		border: solid var(--fgColor) 2px;
+		height: 100%;
+		font-size: 0.85em;
+		border-bottom: solid var(--fgColor) 5px;
+	
+	}
+
+	.sequencerTitles p{
+		font-size: 0.85em;
+		height: 3.4em;
+		margin-bottom: 1.16em;
+	}
+
+	.sequencerTitles p:first-child {
+		font-size: 0.85em;
+		height: 2.9em;
+		margin-bottom: 1.2em;
+	
+	}
+
+	.formSection form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 7em;
+		/* background-color: red; */
+	}
+
+	.rightColumn {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: right;
+		/* background-color: red; */
+	}
+
+	.rightColumn {
+		width: 90%;
+		justify-content: right;
+		padding-left: 0.5em;
+		height: 45%;
+		/* background-color: red; */
+	}
+
+	.leftColumn {
+		width: 100%;
+		height: 55%;
+	}
+
+	.rightColumn .previewButton, .saveButton {
+		font-size: 0.8em;
+		height: 2.5em;
+	}
+
+	.rightColumn .previewButton {
+		margin-right: 0.5em;
+	}
+
+
+	.leftColumn input {
+		font-family: 'Dynapuff';
+		padding-left: 0.5em;
+		font-size: 1.5em;
+		outline: none;
+		height: 70%;
+		width: 90%;
+		text-decoration: none;
+		background: var(--fgColorLighter);
+		color: var(--fgColor);
+		border-radius: 0.3em;
+		border: none;
+	}
+
+	.headerDescText {
+		width: 40%;
+		display: flex;
+		margin-right: 0.2em;
+		color: var(--fgColor);
+		font-size: 1em;
+		font-style: "Ubuntu";
+		justify-content: right;
+	}
+
+	.locationList div div button {
+		font-size: 1em;
+	}
+	
+	
+
+
+}
